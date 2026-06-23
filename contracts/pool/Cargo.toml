@@ -1,0 +1,20 @@
+[package]
+name = "privatepay-pool"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+doctest = false
+
+[dependencies]
+soroban-sdk = "26.1.0"
+# Import the verifier types for cross-contract call struct definitions
+privatepay-verifier = { path = "../verifier" }
+
+[dev-dependencies]
+soroban-sdk = { version = "26.1.0", features = ["testutils"] }
+privatepay-verifier = { path = "../verifier", features = ["testutils"] }
+
+[features]
+testutils = ["soroban-sdk/testutils", "privatepay-verifier/testutils"]

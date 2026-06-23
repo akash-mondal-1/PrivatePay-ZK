@@ -1,0 +1,50 @@
+{
+  "alpha_g1": {
+    "x": "1e2cd0bad4b276e9d95bf3fdc4f54f8c39f0eec00abaad5d6ed9f6b17ab68dd4",
+    "y": "302c7185dff011a5ac0878181f686ef49d97566c5590b4a0252b5b2b002e32cc"
+  },
+  "beta_g2": {
+    "x": [
+      "29b0bbc97c22a6cdb5cf0dea75e4c66402f9ca131b5317fd0a26d1a21ddd382e",
+      "1152c9fcaaec18988a490afc9da05f9ce257b5d5b362aca7cc0e2b95f0fe4649"
+    ],
+    "y": [
+      "149571f30bc98fd54a9f17c21db5e548d8943cf5e1ef9e848dd33094dc947622",
+      "2dae944f0f50b5903c35372d3ce0e324248638e6b6fec594fdf90474651202bb"
+    ]
+  },
+  "delta_g2": {
+    "x": [
+      "1bdb443ce61ebcf93daed4215a57e1cec90ca64973023e31197a112e8cee72f6",
+      "117e26c4235f42625b3404f2973059814ff260dba7176d7aae910f493a8e1fb5"
+    ],
+    "y": [
+      "196e247a12f580e36894f256f0c122393489b4c213b3e913250feee806ca45ff",
+      "2fedff4e4bbcbf9f1c56e28a060d50eef5f54e2aab897f6b465acd2ed005ae91"
+    ]
+  },
+  "gamma_g2": {
+    "x": [
+      "198e9393920d483a7260bfb731fb5d25f1aa493335a9e71297e485b7aef312c2",
+      "1800deef121f1e76426a00665e5c4479674322d4f75edadd46debd5cd992f6ed"
+    ],
+    "y": [
+      "090689d0585ff075ec9e99ad690c3395bc4b313370b38ef355acdadcd122975b",
+      "12c85ea5db8c6deb4aab71808dcb408fe3d1e7690c43d37b4ce6cc0166fa7daa"
+    ]
+  },
+  "ic": [
+    {
+      "x": "2b3cca2888805084c9942e697cd981a4d57667f29290eacd2a2ccef87a471911",
+      "y": "1aa177c6815e678f7b7ec03eddcd97fb8b204dea1680a4735b5c607655573d86"
+    },
+    {
+      "x": "2e0ba3b9c195a40d0d87dadcc78b245763752ae70a331a014eb248962db4d631",
+      "y": "1c0b77eb4145f9494c0566050b4f1e7218a8a5c7037d53ff103c9c4aa6934c0f"
+    },
+    {
+      "x": "03740ae8553a4fbf8d2f82b8efe78912ba8a75448b46b84c6dc00d40a278b576",
+      "y": "219522822fb8317adb3223c08d6e460ff86b1429c29dac12833599b46b4ec539"
+    }
+  ]
+}

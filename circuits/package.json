@@ -1,0 +1,24 @@
+{
+  "name": "privatepay-zk-circuits",
+  "version": "1.0.0",
+  "description": "Circom circuits and ZK proving workflow for PrivatePay ZK",
+  "scripts": {
+    "compile": "node scripts/compile.mjs",
+    "setup:ptau": "node scripts/ptau.mjs",
+    "setup:zkey": "node scripts/zkey.mjs",
+    "prove:withdraw": "node scripts/prove.mjs withdraw",
+    "prove:compliance": "node scripts/prove.mjs compliance",
+    "verify:withdraw": "node scripts/verify.mjs withdraw",
+    "verify:compliance": "node scripts/verify.mjs compliance",
+    "build:all": "node scripts/build_all.mjs",
+    "test:e2e": "node scripts/test_e2e.mjs"
+  },
+  "dependencies": {
+    "circomlib": "^2.0.5",
+    "circomlibjs": "^0.1.7"
+  },
+  "devDependencies": {
+    "circom2": "^0.2.22",
+    "snarkjs": "^0.7.6"
+  }
+}

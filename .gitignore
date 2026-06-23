@@ -1,0 +1,36 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# Node.js Dependencies
+node_modules/
+/frontend/node_modules/
+/circuits/node_modules/
+npm-debug.log*
+
+# Rust / Soroban Build Artifacts
+/contracts/target/
+/contracts/**/target/
+/contracts/target_test/
+/contracts/**/target_test/
+/contracts/target_build/
+/contracts/**/target_build/
+
+# Next.js Build Outputs
+/frontend/.next/
+/frontend/out/
+/frontend/next-env.d.ts
+
+# Secrets and Environment Variables
+.env
+.env.local
+.env.*.local
+*.env
+*.env.local
+/frontend/.env.local
+/frontend/.env.*.local
+
+# Circuit Ceremony Intermediates (provers are copied to frontend/public)
+/circuits/build/
+/circuits/artifacts/
+/circuits/test.ptau
