@@ -2,6 +2,12 @@
 
 **Private payroll and B2B payments on Stellar with selective disclosure and compliance-ready zero-knowledge proofs.**
 
+## 🎥 Demo
+
+Watch the complete project demo here:
+
+https://youtu.be/yHwbAM_KvDg
+
 ---
 
 ### 🌐 Verified Live on Stellar Testnet
@@ -25,6 +31,14 @@ Businesses require payment confidentiality. Public ledgers expose employee salar
 * **On-Chain Groth16 Verification:** Proofs are verified directly in a Soroban contract using the native BN254 elliptic curve host functions introduced in **Stellar Protocol 26**.
 * **Decentralized Client-Side Event Indexing:** The frontend constructs the Merkle Tree dynamically by crawling deposit events from the Stellar RPC network. No centralized backend, database, or indexing server is required.
 * **Compliance-Ready Selective Disclosure:** Senders can generate "Compliance Proofs" for auditors, allowing them to reveal specific transaction amounts, senders, and recipients matching a designated auditor key without disclosing this information publicly.
+
+---
+
+## 🌍 Why PrivatePay ZK
+
+Traditional blockchain payments expose every transaction publicly.
+
+PrivatePay ZK demonstrates how organizations can preserve financial privacy while maintaining cryptographic integrity and regulatory compliance using zero-knowledge proofs on Stellar.
 
 ---
 
@@ -77,11 +91,76 @@ Written in Next.js & React (TypeScript):
 
 ---
 
-## 📂 Repository Structure
+## 🔄 How PrivatePay ZK Works
 
-* `/circuits` - Circom source files (`withdraw.circom`, `compliance.circom`, `merkleTree.circom`), trusted setup configurations, and deployment builds.
-* `/contracts` - Soroban Rust contracts (`pool`, `verifier`) along with full unit testing suites.
-* `/frontend` - Next.js React application, tailwind styling, ZK prover wrapper, and Freighter context.
+1. User connects Freighter wallet.
+2. Secret and nullifier are generated locally.
+3. Poseidon commitment is computed.
+4. Commitment is submitted to the privacy pool.
+5. Deposit event is stored on Stellar.
+6. Frontend reconstructs the Merkle Tree.
+7. User generates a Groth16 proof locally.
+8. Soroban verifier validates the proof.
+9. Funds are withdrawn to a fresh address.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Zero-Knowledge Proofs (ZKP):** Circom, SnarkJS, Groth16 Proving System
+* **Smart Contracts (Soroban/Stellar):** Rust, Soroban SDK, BN254 Elliptic Curve Host Functions (Stellar Protocol 26)
+* **Frontend:** Next.js (React), TypeScript, Tailwind CSS
+* **Wallet Integration:** Freighter Wallet, Stellar Wallets Kit
+* **Cryptography & Hashing:** Poseidon Hash Commitments, Merkle Membership Proofs
+
+---
+
+## 🔒 Security Features
+
+- ✅ Groth16 Zero-Knowledge Proofs
+- ✅ Poseidon Hash Commitments
+- ✅ Merkle Membership Proofs
+- ✅ Nullifier-Based Double Spend Protection
+- ✅ On-Chain BN254 Pairing Verification
+- ✅ Local Witness Generation
+- ✅ No Private Data Stored On-Chain
+- ✅ Client-Side Proof Generation
+
+---
+
+## 📌 Current Status
+
+- ✅ Live on Stellar Testnet
+- ✅ Contracts deployed
+- ✅ Real Freighter integration
+- ✅ Real Soroban transactions
+- ✅ Live Groth16 verification
+- ✅ End-to-end deposit flow
+
+Known limitation:
+
+The Stellar Testnet RPC occasionally experiences timeout and indexing delays. Transactions are still successfully confirmed on-chain and can be verified through Stellar Expert.
+
+---
+
+## 📂 Project Structure
+
+```text
+PrivatePay-ZK
+│
+├── circuits/              # Circom circuits
+├── contracts/             # Soroban smart contracts
+│   ├── verifier
+│   └── pool
+│
+├── frontend/              # Next.js application
+│
+├── scripts/               # Deployment & build scripts
+│
+├── docs/
+│
+└── README.md
+```
 
 ---
 
@@ -131,3 +210,31 @@ If you are a Hackathon judge or developer auditing the project:
 3. **Wait for confirmation:** Check the Dashboard to verify that TVL and Commitment Count update dynamically.
 4. **ZK Withdrawal:** Go to the *Withdraw* tab. Paste your secret key and nullifier. Enter the recipient wallet address, generate the Groth16 proof locally in your browser, and submit the proof to the Soroban Verifier on-chain.
 5. **Selective Disclosure Check:** Go to the *Auditor View*. input your secret/nullifier, amount, and an auditor key to compute the compliance proof. Paste it into the *Verify Proof* tab to confirm the cryptographic binding.
+
+---
+
+## 🚀 Roadmap
+
+- Anonymous recurring payroll
+- Multi-token privacy pools
+- Recursive proof aggregation
+- Batch withdrawals
+- DAO treasury privacy
+- Enterprise compliance portal
+
+---
+
+## 🙏 Acknowledgements
+
+- Stellar Development Foundation
+- Soroban
+- Circom
+- SnarkJS
+- circomlib
+- Freighter Wallet
+
+---
+
+## 📄 License
+
+MIT License
